@@ -1,8 +1,11 @@
 const mobileNav = function () {
+  const header = document.querySelector(".header");
+  const mainContainer = document.querySelector(".main-container");
   const navList = document.querySelector(".nav-list");
   const menuBtn = document.querySelector(".menu-btn");
+  const navBtnContainer = document.querySelector(".nav-mobile");
   let menuOpen = false;
-  menuBtn.addEventListener("click", () => {
+  navBtnContainer.addEventListener("click", () => {
     if (!menuOpen) {
       menuBtn.classList.add("open");
       menuOpen = true;
@@ -10,7 +13,9 @@ const mobileNav = function () {
       menuBtn.classList.remove("open");
       menuOpen = false;
     }
-    navList.classList.toggle("nav-open");
+
+    header.classList.toggle("nav-open");
+    mainContainer.classList.toggle("nav-open");
   });
 };
 mobileNav();
