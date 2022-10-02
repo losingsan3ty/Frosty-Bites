@@ -263,7 +263,8 @@ ul {
 }
 
 .section {
-  padding: var(--spacing-l) 0;
+  padding: var(--spacing-xl) 0;
+  margin: 0 auto;
   transition: all 0.5s ease-out;
   z-index: 3;
 }
@@ -436,7 +437,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 .flavor {
   width: 100vw;
   /* border-top: ; */
-  padding: var(--spacing-l) 0;
+  margin: var(--spacing-l) 0;
   /* border-top: 0.3rem solid var(--clr-secondary); */
 }
 .flavors-icon {
@@ -522,9 +523,14 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 
 /* end of flavors section */
 /* footer */
+#contacts {
+  margin-bottom: 0;
+}
 .footer-section {
   gap: var(--spacing-ml);
+  padding: var(--spacing-l) 0;
   flex-direction: column;
+
   font-size: 1.44rem;
 }
 .socials {
