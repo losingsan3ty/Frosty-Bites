@@ -223,6 +223,7 @@ ul {
 }
 .nav-list {
   position: absolute;
+  width: 100vw;
   top: 0%;
   right: 0%;
 }
@@ -265,8 +266,9 @@ ul {
 .section {
   padding: var(--spacing-xl) 0;
   margin: 0 auto;
-  transition: all 0.5s ease-out;
+  transition: all 0.4s ease-out;
   z-index: 3;
+  background-color: var(--clr-background);
 }
 /* hamgurger button from  https://www.youtube.com/watch?v=dIyVTjJAkLw  */
 .menu-btn {
@@ -319,12 +321,14 @@ ul {
 /* hero */
 .header {
   padding: 0;
+  background-color: transparent;
 }
 .first-heading {
   font-weight: 600;
   text-transform: uppercase;
   color: var(--clr-white);
   font-size: var(--fs-xl);
+
   line-height: 1.25;
   letter-spacing: var(--header-letter-spacing);
   margin-bottom: var(--spacing-ml);

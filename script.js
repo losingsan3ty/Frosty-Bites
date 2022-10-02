@@ -8,6 +8,16 @@ const mobileNav = function () {
     sections.forEach((sec) => sec.classList.toggle("nav-open"));
   };
   let menuOpen = false;
+  const menuToggle = function () {
+    if (!menuOpen) {
+      menuBtn.classList.add("open");
+      menuOpen = true;
+    } else {
+      menuBtn.classList.remove("open");
+      menuOpen = false;
+    }
+  };
+
   navBtnContainer.addEventListener("click", () => {
     if (!menuOpen) {
       menuBtn.classList.add("open");
@@ -26,6 +36,7 @@ const mobileNav = function () {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
     navToggle();
+    menuToggle();
   });
 };
 mobileNav();
