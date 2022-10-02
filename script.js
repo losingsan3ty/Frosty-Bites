@@ -1,6 +1,5 @@
 const mobileNav = function () {
-  const header = document.querySelector(".header");
-  const mainContainer = document.querySelector(".main-container");
+  const sections = document.querySelectorAll(".section");
   const navList = document.querySelector(".nav-list");
   const menuBtn = document.querySelector(".menu-btn");
   const navBtnContainer = document.querySelector(".nav-mobile");
@@ -13,9 +12,8 @@ const mobileNav = function () {
       menuBtn.classList.remove("open");
       menuOpen = false;
     }
-
-    header.classList.toggle("nav-open");
-    mainContainer.classList.toggle("nav-open");
+    navList.classList.toggle("nav-list-active");
+    sections.forEach((sec) => sec.classList.toggle("nav-open"));
   });
 };
 mobileNav();
