@@ -209,7 +209,8 @@ ul {
   z-index: 2;
 }
 .section {
-  padding: var(--spacing-xxl) 0;
+  padding-top: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
   margin: 0 auto;
   transition: all 0.4s ease-out;
   z-index: 3;
@@ -236,10 +237,13 @@ ul {
 /* end of js classes */
 /* header */
 .header {
-  min-width: 100vw;
+  padding: 0;
+  background-color: transparent;
   justify-content: space-between;
   text-align: left;
   inset: 0%;
+  padding-right: 3.2rem;
+  padding-left: 3.2rem;
   position: absolute;
   height: 6.4rem;
   margin-top: 0.4rem;
@@ -248,9 +252,6 @@ ul {
 .header button {
   background-color: transparent;
   border: none;
-}
-.logo {
-  margin-left: 2rem;
 }
 .logo img {
   width: 64px;
@@ -261,8 +262,7 @@ ul {
   display: none;
 }
 .main-nav-list {
-  gap: var(--spacing-ml);
-  margin-right: 2rem;
+  gap: var(--spacing-l);
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -285,9 +285,7 @@ ul {
 }
 /* end of main-nav */
 /* mobile-nav*/
-.btn-mobile-nav {
-  margin-right: 2rem;
-}
+
 .mobile-nav-list {
   position: absolute;
   width: 100vw;
@@ -384,8 +382,6 @@ ul {
 /* end of header  */
 /* hero */
 .header {
-  padding: 0;
-  background-color: transparent;
 }
 .heading-primary {
   font-weight: 600;
@@ -421,8 +417,7 @@ ul {
 .hero-img {
   height: 100%;
 }
-.hero-img img {
-}
+
 .btn:link,
 .btn:visited {
   color: var(--clr-dark);
