@@ -245,7 +245,7 @@ ul {
   padding-right: 3.2rem;
   padding-left: 3.2rem;
   position: absolute;
-  height: 6.4rem;
+  height: 9.6rem;
   margin-top: 0.4rem;
   z-index: 3;
 }
@@ -276,7 +276,7 @@ ul {
 .nav-contacts:visited,
 .nav-contacts:link {
   padding: 0.6rem 1.2rem;
-  /* color: var(--clr-dark); */
+
   background-color: var(--clr-primary);
   border-radius: 10rem;
 }
@@ -757,6 +757,11 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   .location {
     font-size: var(--fs-s);
     row-gap: var(--spacing-m);
+  }
+}
+@media screen and (min-width: 75.5em) {
+  .container {
+    max-width: 120rem;
   }
 }
 
