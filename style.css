@@ -98,7 +98,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   --fs-l: 2.887rem;
   --fs-ml: 2.566rem;
   --fs-m: 2.027rem;
-  --fs-s: 1.802rem;
+  --fs-s: 1.728rem;
   --fs-xs: 1.44rem;
   --fs-xxs: 1.2rem;
 }
@@ -262,11 +262,11 @@ ul {
   display: none;
 }
 .main-nav-list {
-  gap: var(--spacing-l);
+  gap: var(--spacing-ml);
 }
 .main-nav-link:link,
 .main-nav-link:visited {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-s);
   color: var(--clr-white);
   transition: all 0.2s ease-in;
 }
@@ -705,8 +705,10 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   .html {
     font-size: 5%;
   }
-  .scetion-about div {
+  .section-about div {
     grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-ml);
+    line-height: 1.5;
   }
   .hero-text-box {
     margin-left: var(--spacing-l);
