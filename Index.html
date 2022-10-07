@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frosty Bites is a dessert parlor,concentrated on serving ice cream with a recharged consideration regarding flavor and sense of taste and diet choices . We build up every formula explicitly for every individual flavor.">
     <title>Frosty Bites</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,38 +13,47 @@
     <script defer src="/script.js"></script>
   </head>
   <body>
-    <header class="header flex container section">
+    <header class="header flex  section">
       <div class="logo"><img src="/img/Group.svg" alt="Logo" /></div>
       <div class="btn-mobile-nav flex">
         <div class="menu-btn flex">
           <div class="menu-btn__burger"></div>
         </div>
       </div>
+      <div class="main-nav">
+        <ul class="main-nav-list nav-list flex">
+          <li><a href="#about" class="main-nav-link nav-link">About</a></li>
+          <li><a href="#features"class="main-nav-link nav-link">Features</a></li>
+          <li><a href="#flavors" class="main-nav-link nav-link">Flavors</a></li>
+          <li><a href="#map" class="main-nav-link nav-link">Locations</a></li>
+          <li><a href="#contacts" class="main-nav-link nav-contacts nav-link">Contacts</a></li>
+        </ul>
+      </div>
     </header>
-    <nav class="mobile-nav-list">
+    <nav class="mobile-nav-list ">
       <span class="btn-close-mobile-nav">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </span>
-      <ul class="flex">
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#features">Features</a></li>
-        <li><a class="nav-link" href="#flavors">Flavors</a></li>
-        <li><a class="nav-link" href="#map">Locations</a></li>
-        <li><a class="nav-link mobile-nav-list-last-child" href="#contacts">contacts</a></li>
+      <ul class="flex nav-list">
+        <li><a class="mobile-nav-link nav-link" href="#about">About</a></li>
+        <li><a class="mobile-nav-link nav-link" href="#features">Features</a></li>
+        <li><a class="mobile-nav-link nav-link" href="#flavors">Flavors</a></li>
+        <li><a class="mobile-nav-link nav-link" href="#map">Locations</a></li>
+        <li><a class="mobile-nav-link mobile-nav-list-last-child nav-link" href="#contacts">contacts</a></li>
       </ul>   
     </nav>
     <main>
       <section class="section-hero flex  section">
-        <div class="hero-text-box container">
-          <h1 class="heading-primary">Making <span class="pink-word">Delicious</span> Healthy Ice Cream</h1>
+        <div class="hero-text-box ">
+          <h1 class="heading-primary">Making <span class="pink-word">Delicious</span><br> Healthy Ice Cream</h1>
           <a href="#" class="btn">Visit US</a>
         </div>
       </section>
       <section  id="about"class="container  section section-about">
-        <h2 class="second-heading">About us</h2>
-        <div class="about-content grid">
+        <h2 class="heading-secondary">About us</h2>
+        <div class="grid">
           <div>
             <span class="about-text">Frosty Bites is a dessert parlor,concentrated on serving ice cream
               with a recharged consideration regarding flavor and sense of taste
@@ -58,31 +68,32 @@
       </section>
       <section id="features" class="section-features section--hidden section ">
         <div class="container">
-        <h3 class="third-heading">What Makes Us Special</h3>
-        <div class="features grid grid--2-cols">
+        <h2 class="heading-secondary">What Makes Us Special</h2>
+        <div class=" features-container grid grid--2-cols">
       <div class="feature grid grid-center ">
         <div class="feature-img">
           <img src="./img/features-images/cow.svg" alt="">
         </div>
-      <h4 class="feature-heading">Fresh from local farms</h4>
+      <h3 class="feature-heading">Fresh from local farms</h3>
       </div>
       <div class="feature grid grid-center">
         <div class="feature-img">
         <img src="./img/features-images/community.svg" alt="">
       </div>
-      <h4 class="feature-heading">Community is Valued</h4>
+      <h3 class="feature-heading">Community is Valued
+      </h3>
       </div>
       <div class="feature grid grid-center">
         <div class="feature-img">
           <img src="./img/features-images/recycle.svg" alt="">
         </div>
-          <h4 class="feature-heading">Recycable materials</h4>
+          <h3 class="feature-heading">Recycable materials</h3>
         </div>
       <div class="feature grid grid-center">
         <div class="feature-img">
           <img src="./img/features-images/Ice cream.svg" alt="">
         </div>
-          <h4 class="feature-heading ">Healthy and delicious</h4>
+          <h3 class="feature-heading ">Healthy and delicious</h3>
         </div></div>
         </section>
       <section id="flavors" class="section-flavors grid  grid--1-cols grid-center section  ">
@@ -95,7 +106,7 @@
             </div>
             <div class="flavor-content  grid">
               <h4 class="flavor-heading">Lemon</h4>
-              <p class="flavor-describtion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, atque? Animi sunt eum hic laudantium!
+              <p class="flavor-text-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, atque? Animi sunt eum hic laudantium!
               </p>
             </div>
           </div>
@@ -105,7 +116,7 @@
             </div>
             <div class="flavor-content  grid">
               <h4 class="flavor-heading">Water melon </h4>
-              <p class="flavor-describtion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus nisi deserunt reprehenderit quos molestiae.</p>
+              <p class="flavor-text-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus nisi deserunt reprehenderit quos molestiae.</p>
             </div>
         </div>
           <div class="flavor container">
@@ -114,7 +125,7 @@
             </div>
             <div class="flavor-content container grid">
               <h4 class="flavor-heading">StrawBerry</h4>
-              <p class="flavor-describtion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem quaerat quod consequatur qui voluptas ducimus!</p>
+              <p class="flavor-text-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem quaerat quod consequatur qui voluptas ducimus!</p>
             </div>
           </div>
           <div class="flavor container">
@@ -123,13 +134,14 @@
             </div>
             <div class="flavor-content  grid">
               <h4 class="flavor-heading">Cherry</h4>
-              <p class="flavor-describtion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur ad quidem earum expedita nobis repudiandae!</p>
+              <p class="flavor-text-box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur ad quidem earum expedita nobis repudiandae!</p>
             </div>
           </div>
         </div>
       </section>
       <section id="map" class="section  section-map grid grid-center container">
-        <h3 class="third-heading ">where you can find us</h3>
+        <h2 class="heading-secondary ">where you can find us</h2>
+        <div class="map-container grid">
         <div class="map-box"><img src="img/map items/map.svg" alt=""></div>
         <div class="locations">
           <div class="location grid grid-center">
@@ -148,7 +160,7 @@
               </span>
             </span>
           </div>
-          <div class="location grid grid-center">
+           <div class="location grid grid-center">
             <h4 class="location-header">Location 2</h4>
             <p class="location-text">86 Foxrun St.Westbury, NY 11590
             </p>
@@ -165,11 +177,13 @@
             </span>
           </div>
         </div>
+         
+        </div>
       </section>
     </main>
     <footer id="contacts" class="section footer" >
       <div class="container  footer-section grid grid--1-cols">
-        <div class="address grid grid--1-cols">
+        <div class="flex address ">
           <h5 class="address-heading">CONTACTS</h5>
           <p>55 Carriage Dr.Champaign, IL 61821</p>
           <p>315-894-2440</p>
@@ -182,11 +196,12 @@
           <li ><a class="footer-link" href="#">Our suppliers</a></li>
           <li ><a class="footer-link" href="#">for job opportunities</a></li>
           <li ><a class="footer-link" href="#">Suggest us a falvor</a></li>
+          
         </ul>
         <div class="socials flex">
-          <a href=""><img src="/img/socials-icon/ig-instagram-icon.svg" alt="" class="socials-icon"></a>
-          <a href=""><img src="/img/socials-icon/twitter-app-icon.svg" alt="" class="socials-icon"></a>
-          <a href=""><img src="/img/socials-icon/facebook-app-icon.svg" alt="" class="socials-icon"></a>
+          <a aria-label="My insta" target="_blank" href="https://www.instagram.com/losingsan3ty/"><img src="/img/socials-icon/ig-instagram-icon.svg" alt="" class="socials-icon"></a>
+          <a  aria-label="random href leads to nothing" href="#"><img src="/img/socials-icon/twitter-app-icon.svg" alt="" class="socials-icon"></a>
+          <a  aria-label="random href leads to nothing" href="#"><img src="/img/socials-icon/facebook-app-icon.svg" alt="" class="socials-icon"></a>
         </div>
         <div class="copy-right">
           <p>Copyright © 2022 by Frosty Bites, Inc. All rights reserved.</p>
