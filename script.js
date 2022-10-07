@@ -11,6 +11,7 @@ const mobileNavToggle = function () {
   sections.forEach((sec) => sec.classList.toggle("nav-open"));
   // hide the nav menu button
   menuBtn.classList.toggle("open");
+  navCloseBtn.classList.toggle("hidden");
 };
 
 navMobileBtn.addEventListener("click", () => {
