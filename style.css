@@ -798,9 +798,18 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
     row-gap: var(--spacing-m);
   }
 }
-@media screen and (min-width: 75.5em) {
-}
+
 @media screen and (min-width: 87.5em) {
+  :root {
+    --fs-xxl: 5.16rem;
+    --fs-xl: 4.3rem;
+    --fs-l: 3.283rem;
+    --fs-ml: 2.887rem;
+    --fs-m: 2.566rem;
+    --fs-s: 2.027rem;
+    --fs-xs: 1.728rem;
+    --fs-xxs: 1.44rem;
+  }
 }
 
 /* end of media queries */
