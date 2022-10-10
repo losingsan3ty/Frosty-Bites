@@ -177,32 +177,6 @@ ul {
 }
 /* end of utility classes */
 
-/* js classes */
-.hidden {
-  display: none;
-}
-.lazy-img {
-  border-radius: 50%;
-  background-image: url(/img/flavors/blurred-img.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.lazy-img img {
-  width: 64px;
-  height: 64px;
-  z-index: 2;
-}
-.mobile-nav-list-active {
-  position: fixed;
-}
-.nav-open {
-  translate: -65vw;
-}
-.section--hidden {
-  opacity: 0;
-  translate: 0 30%;
-}
-/* end of js classes */
 /* header */
 .header {
   padding: 0;
@@ -345,6 +319,32 @@ ul {
 /* end of humberger button */
 /* end of mobile-nav */
 /* end of header  */
+/* js classes */
+.hidden {
+  display: none;
+}
+.lazy-img {
+  border-radius: 50%;
+  background-image: url(/img/flavors/blurred-img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.lazy-img img {
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+}
+.mobile-nav-list-active {
+  position: fixed;
+}
+.nav-open {
+  translate: -65vw;
+}
+.section--hidden {
+  opacity: 0;
+  translate: 0 30%;
+}
+/* end of js classes */
 /* hero */
 
 .heading-primary {
