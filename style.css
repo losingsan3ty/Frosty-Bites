@@ -6,7 +6,6 @@
 *::after {
   box-sizing: border-box;
 }
-
 /* Remove default margin */
 * {
   margin: 0;
@@ -16,58 +15,14 @@ a:link,
 a:visited {
   text-decoration: none;
 }
-/* 
---- 01 TYPOGRAPHY SYSTEM
-font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.986 / 3.583 / 4.3 / 5.16 /  6.192 /  7.43 / 
-8.916
-
-- Font weights
-light :400
-default: 500
-Semi-bold: 600
-Bold: 700
-
-- Line heights
-Default: 1
-Small: 1.05
-Medium: 1.2
-Paragraph default: 1.7
-Large: 1.8
-
-- Letter spacing
--0.5px
-0.75px
-
---- 02 COLORS
-
-- Primary: 
-- Tints:
-
-
-- Shades: 
-
-
-
-- Accents:
-- Greys
-
-
---- 05 SHADOWS
-
-0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-
---- 06 BORDER-RADIUS
-
-Default: 9px
-Medium: 11px
-
---- 07 WHITESPACE
+/* spacing and type scale */
+/* --- 07 WHITESPACE
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 - Spacing system (px)
 font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.986 / 3.583 / 4.3 / 5.16 /  6.192 /  7.43 / 
-8.916
+8.916 */
 
-*/
+/* custom types */
 :root {
   --clr-primary: #ea3882;
   --clr-primary-1-lighter: #ee609b;
@@ -90,6 +45,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   --spacing-ml: 2.4rem;
   --spacing-m: 1.2rem;
   --spacing-s: 0.8rem;
+  --spacing-xs: 0.4rem;
   --curr-screen-width: 100vw;
   --container-screen-ratio: calc(100vw * 0.1);
   --header-letter-spacing: -0.5px;
@@ -102,13 +58,14 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   --fs-s: 1.728rem;
   --fs-xs: 1.44rem;
   --fs-xxs: 1.2rem;
+  --main-transition: ;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
+/* general css */
 h2,
 h3,
 h4,
@@ -118,6 +75,7 @@ h6 {
   text-transform: uppercase;
   line-height: 1.1;
 }
+/* end of general css */
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -135,7 +93,6 @@ body {
   color: var(--clr-dark-1-lighter);
   font-family: "Montserrat", sans-serif;
   position: relative;
-
   text-align: center;
   text-rendering: optimizeSpeed;
   font-size: var(--fs-s);
@@ -193,6 +150,7 @@ ul {
 .grid {
   display: grid;
   row-gap: var(--spacing-xl);
+  column-gap: var(--spacing-l);
 }
 .grid--2-cols {
   grid-template-columns: 1fr 1fr;
@@ -202,14 +160,12 @@ ul {
 }
 .grid-center {
   justify-items: center;
+  align-items: center;
 }
 .container {
   max-width: calc(var(--curr-screen-width) - var(--container-screen-ratio));
   margin: 0 auto;
-  padding: 0 var(--spacing-l);
-}
-.main-container {
-  z-index: 2;
+  padding: 0 var(--spacing-m);
 }
 .section {
   padding-top: var(--spacing-xxl);
@@ -221,24 +177,7 @@ ul {
 /* end of utility classes */
 
 /* js classes */
-.hidden {
-  display: none;
-}
-.lazy-img {
-  border-radius: 50%;
-  background-image: url(/img/flavors/blurred-img.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.lazy-img img {
-  width: 64px;
-  height: 64px;
-  z-index: 2;
-}
-.section--hidden {
-  opacity: 0;
-  translate: 0 30%;
-}
+
 /* end of js classes */
 /* header */
 .header {
@@ -247,11 +186,11 @@ ul {
   justify-content: space-between;
   text-align: left;
   inset: 0%;
-  padding-right: 3.2rem;
-  padding-left: 3.2rem;
+  padding-right: var(--spacing-l);
+  padding-left: var(--spacing-l);
   position: absolute;
   height: 9.6rem;
-  margin-top: 0.4rem;
+  margin-top: var(--spacing-xs);
   z-index: 3;
 }
 .header button {
@@ -301,13 +240,11 @@ ul {
   font-size: var(--fs-m);
   right: 0%;
 }
-.mobile-nav-list-active {
-  position: fixed;
-}
+
 .mobile-nav-list ul {
   z-index: -1;
   padding-right: 4.8rem;
-  row-gap: var(--spacing-ml);
+  row-gap: 3vh;
   flex-direction: column;
 }
 .mobile-nav-link:link,
@@ -330,9 +267,7 @@ ul {
   top: 2%;
   right: 5%;
 }
-.nav-open {
-  translate: -65vw;
-}
+
 /* end of btn-mobile-nav*/
 
 /* hamgurger button from  https://www.youtube.com/watch?v=dIyVTjJAkLw  */
@@ -460,6 +395,10 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   margin-bottom: var(--spacing-l);
   letter-spacing: var(--header-letter-spacing);
 }
+.about-img-box img {
+  width: 100%;
+  height: 100%;
+}
 .about-img {
   border-radius: 0.8rem;
   margin: 0 auto;
@@ -489,13 +428,16 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   width: 6.4rem;
   height: 6.4rem;
 }
-.feature-heading {
-  text-transform: capitalize;
+.heading-tertiary {
+  color: var(--clr-dark);
   font-size: var(--fs-m);
-  color: var(--clr-dark-1-lighter);
-  letter-spacing: -0.1rem;
+  letter-spacing: var(--header-letter-spacing);
+  margin-bottom: var(--spacing-m);
 }
-
+.feature h3 {
+  text-transform: capitalize;
+  letter-spacing: -0.5px;
+}
 /* end of features section */
 /*  flavors section */
 .section-flavors {
@@ -513,7 +455,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 }
 
 .flavors-icon img {
-  border: 0.4rem solid var(--clr-primary);
+  border: var(--spacing-xs) solid var(--clr-primary);
   border-radius: 10rem;
   width: 8rem;
   height: 8rem;
@@ -528,12 +470,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   height: 100%;
   border-radius: 50%;
 }
-.flavor-heading {
-  color: var(--clr-dark);
-  font-size: var(--fs-m);
-  text-transform: uppercase;
-  margin-bottom: var(--spacing-m);
-}
+
 .flavor-content {
   gap: var(--spacing-s);
 }
@@ -559,7 +496,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   border-radius: 5%;
 }
 .locations {
-  width: 90%;
+  width: 100%;
   margin: auto auto;
 }
 .location {
@@ -586,7 +523,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 .location-type {
   font-weight: 500;
   justify-content: center;
-  gap: 0.4rem;
+  gap: var(--spacing-xs);
 }
 .location span:last-of-type {
   font-weight: 600;
@@ -673,6 +610,10 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 }
 
 @media screen and (orientation: portrait) and (min-width: 37.5em) {
+  .container {
+    padding-right: var(--spacing-l);
+    padding-left: var(--spacing-l);
+  }
   .heading-primary {
     font-size: var(--fs-xxl);
   }
@@ -782,7 +723,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 }
 @media screen and (min-width: 62.5em) {
   html {
-    font-size: 85%;
+    font-size: 82%;
   }
   .container {
     max-width: 120rem;
@@ -813,3 +754,27 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
 }
 
 /* end of media queries */
+.hidden {
+  display: none;
+}
+.lazy-img {
+  border-radius: 50%;
+  background-image: url(/img/flavors/blurred-img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.lazy-img img {
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+}
+.mobile-nav-list-active {
+  position: fixed;
+}
+.nav-open {
+  translate: -65vw;
+}
+.section--hidden {
+  opacity: 0;
+  translate: 0 30%;
+}

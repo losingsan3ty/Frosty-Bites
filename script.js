@@ -4,7 +4,9 @@ const mobileNavList = document.querySelector(".mobile-nav-list");
 const navCloseBtn = document.querySelector(".btn-close-mobile-nav");
 const menuBtn = document.querySelector(".menu-btn");
 const navMobileBtn = document.querySelector(".btn-mobile-nav");
-
+const flavorsSection = document.querySelector(".section-flavors");
+const hasLazyImg = document.querySelectorAll(".has-lazy-img");
+// general toggle nav function
 const mobileNavToggle = function () {
   // move the body and show the nav
   mobileNavList.classList.toggle("mobile-nav-list-active");
@@ -13,10 +15,11 @@ const mobileNavToggle = function () {
   menuBtn.classList.toggle("open");
   navCloseBtn.classList.toggle("hidden");
 };
-
+// show nav when menu is clicked
 navMobileBtn.addEventListener("click", () => {
   mobileNavToggle();
 });
+// close nav when cross is clicked
 navCloseBtn.addEventListener("click", function (e) {
   mobileNavToggle();
 });
@@ -47,7 +50,7 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.01,
+  threshold: [0.01],
 });
 
 sections.forEach(function (section) {
@@ -65,29 +68,54 @@ sections.forEach(function (section) {
 });
 
 // Lazy loading images
-const imgTargets = document.querySelectorAll("img[data-src]");
+// another way to fixing the problem of images not loading when the user refresh the site and the images are already in view
+// const imgTargets = document.querySelectorAll("img[data-src]");
+// const flavor = document.querySelector(".flavor");
 
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
+
+//   if (!entry.isIntersecting) {
+//     return;
+//   }
+//   // Replace src with data-src
+//   imgTargets.forEach((img) => {
+//     img.src = img.dataset.src;
+//   });
+//   imgTargets.forEach((img) => {
+//     img.addEventListener("load", function (e) {
+//       console.log(e.target);
+//       e.target.closest(".flavor-img").classList.remove("lazy-img");
+//     });
+//   });
+//   observer.unobserve(entry.target);
+// };
+// ----------------------------------------------
+
+// solution one not that optimal
 const loadImg = function (entries, observer) {
   const [entry] = entries;
-
   if (!entry.isIntersecting) {
     return;
   }
-
+  const imgTargets = entry.target.querySelectorAll("img[data-src]");
   // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener("load", function () {
-    entry.target.closest(".flavor-img").classList.remove("lazy-img");
+  imgTargets.forEach((img) => {
+    img.src = img.dataset.src;
   });
 
+  imgTargets.forEach((img) => {
+    img.addEventListener("load", function (e) {
+      e.target.closest(".lazy-img").classList.remove("lazy-img");
+    });
+  });
   observer.unobserve(entry.target);
 };
+
 const initIntersection = function () {};
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
-  threshold: 0,
-  rootMargin: "200px",
+  threshold: [0, 1],
 });
-
-imgTargets.forEach((img) => imgObserver.observe(img));
+imgObserver.observe(flavorsSection);
+hasLazyImg.forEach((section) => imgObserver.observe(section));
