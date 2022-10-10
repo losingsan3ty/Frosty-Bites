@@ -168,8 +168,8 @@ ul {
   padding: 0 var(--spacing-m);
 }
 .section {
-  padding-top: var(--spacing-xxl);
-  padding-bottom: var(--spacing-xxl);
+  padding-top: var(--spacing-xxxl);
+  padding-bottom: var(--spacing-xxxl);
   transition: all 0.4s ease-out;
   z-index: 3;
   background-color: var(--clr-background);
@@ -246,7 +246,7 @@ ul {
 .nav-contacts:visited,
 .nav-contacts:link {
   padding: 0.6rem 1.2rem;
-
+  color: var(--clr-white);
   background-color: var(--clr-primary);
   border-radius: 10rem;
 }
@@ -386,16 +386,16 @@ ul {
   color: var(--clr-dark);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: white;
+  color: var(--clr-white);
   background-color: var(--clr-primary);
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border-radius: 10rem;
 }
 
-.btn:link:hover,
-.btn:visited:hover,
+.btn:hover,
 .btn:active {
+  color: var(--clr-dark-1-lighter);
   background-color: var(--clr-primary-1-lighter);
 }
 /* --- 01 TYPOGRAPHY SYSTEM
