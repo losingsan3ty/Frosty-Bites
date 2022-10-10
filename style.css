@@ -38,6 +38,7 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   --clr-gray-1-lighter: #6d6d6d;
   --clr-gray-2-lighter: #979797;
   --mainTransition: all 0.3s ease-in-out;
+  --spacing-xxxxl: 9.2rem;
   --spacing-xxxl: 7.2rem;
   --spacing-xxl: 6.4rem;
   --spacing-xl: 4.8rem;
@@ -168,8 +169,8 @@ ul {
   padding: 0 var(--spacing-m);
 }
 .section {
-  padding-top: var(--spacing-xxxl);
-  padding-bottom: var(--spacing-xxxl);
+  padding-top: var(--spacing-xxxxl);
+  padding-bottom: var(--spacing-xxxxl);
   transition: all 0.4s ease-out;
   z-index: 3;
   background-color: var(--clr-background);
