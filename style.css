@@ -415,6 +415,10 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   border-radius: 0.8rem;
   margin: 0 auto;
 }
+.about-text-box {
+  justify-self: center;
+  align-self: center;
+}
 .about-img-box {
   width: 100%;
   height: 100%;
