@@ -670,6 +670,9 @@ font-size-scale-px: 0.694 / 0.833 / 1 / 1.2 / 1.44 / 1.728 /  2.074 / 2.488 / 2.
   .flavors {
     grid-template-columns: 1fr 1fr;
   }
+  .flavor-text-box {
+    width: 55%;
+  }
   .flavor-content {
     row-gap: var(--spacing-m);
     margin: 0 auto;
