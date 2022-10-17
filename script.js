@@ -1,3 +1,4 @@
+"use strict";
 const sections = document.querySelectorAll(".section");
 const navList = document.querySelectorAll(".nav-list");
 const mobileNavList = document.querySelector(".mobile-nav-list");
@@ -13,7 +14,6 @@ const mobileNavToggle = function () {
   sections.forEach((sec) => sec.classList.toggle("nav-open"));
   // hide the nav menu button
   menuBtn.classList.toggle("open");
-  navCloseBtn.classList.toggle("hidden");
 };
 // show nav when menu is clicked
 navMobileBtn.addEventListener("click", () => {
